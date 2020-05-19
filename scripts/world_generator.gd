@@ -1,6 +1,7 @@
 extends Node2D
 
 var folder := "res://countries_json/"
+var obj_poly = preload("res://Objects/Polygon.tscn")
 var data = null
 
 
@@ -22,7 +23,7 @@ func _ready() -> void:
 			print("Error Line: ", result_json.error_line)
 			print("Error String: ", result_json.error_string)
 
-		var c = preload("res://Countries//Polygon.tscn").instance()
+		var c = obj_poly.instance()
 		c.init(data)
 #		c.set_name(pays + '_' + str(i))
 		add_child(c)

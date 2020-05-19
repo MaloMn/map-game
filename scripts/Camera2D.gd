@@ -12,17 +12,17 @@ var _drag = false
 
 func _input(event):
 	if event.is_action_pressed("cam_drag"):
-		print('drag')
+#		print('drag')
 		_drag = true
 	elif event.is_action_released("cam_drag"):
 		_drag = false
 	elif event.is_action("cam_zoom_in"):
 		_update_zoom(-ZOOM_INCREMENT, get_local_mouse_position())
-		print('zoom in')
+#		print('zoom in')
 		
 	elif event.is_action("cam_zoom_out"):
 		_update_zoom(ZOOM_INCREMENT, get_local_mouse_position())
-		print('zoom out')
+#		print('zoom out')
 		
 	elif event is InputEventMouseMotion && _drag:
 		set_offset(get_offset() - event.relative*_current_zoom_level)

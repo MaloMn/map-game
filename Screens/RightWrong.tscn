@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Objects/background.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui_components/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui_components/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Screens/RightWrong.gd" type="Script" id=3]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "right"

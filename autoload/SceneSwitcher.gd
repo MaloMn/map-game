@@ -5,7 +5,7 @@ onready var current_scene = get_tree().get_root().get_child(get_tree().get_root(
 var levels: Array = []
 var scenes: Array = ["res://Screens/Capital.tscn"]
 #var start_scene: String = "res://Screens/StartScreen.tscn"
-var start_scene: String = "res://Levels/world_test.tscn"
+var start_scene: String = "res://Levels/World.tscn"
 var rightwrong: String = "res://Screens/RightWrong.tscn"
 
 var parameters = {}
