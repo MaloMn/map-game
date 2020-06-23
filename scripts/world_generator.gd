@@ -6,6 +6,10 @@ var data = null
 
 
 func _ready() -> void:
+	# Background color
+	VisualServer.set_default_clear_color(Color(0,0,1,1.0))
+	
+	var poly_name = ''
 	# Gathering the data
 	for f in list_files_in_directory(folder, 0.1):
 		print(str(folder + f))
@@ -25,7 +29,8 @@ func _ready() -> void:
 
 		var c = obj_poly.instance()
 		c.init(data)
-#		c.set_name(pays + '_' + str(i))
+		poly_name = f.split('_', true, 0)[0]
+		c.set_name(poly_name)
 		add_child(c)
 
 

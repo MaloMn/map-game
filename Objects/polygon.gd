@@ -4,6 +4,7 @@ export (Color, RGB) var mouse_out
 export (Color, RGB) var mouse_over
 
 var area = preload("res://Objects//Area2D.tscn")
+var _selected = false
 
 
 func init(country_pts):
@@ -28,9 +29,19 @@ func polygon(pts):
 	return points
 
 
+func _input(event):
+	if event.is_action("click") and _selected:
+		print(self.name)
+		_selected = false
+		# TODO make a link to master script to tell him to check the answer
+		pass
+
+
 func _on_Area2D_mouse_entered() -> void:
 	set_modulate(mouse_over)
+	_selected = true
 
 
 func _on_Area2D_mouse_exited() -> void:
 	set_modulate(mouse_out)
+	_selected = false
