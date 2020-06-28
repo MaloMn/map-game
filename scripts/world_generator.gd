@@ -1,40 +1,41 @@
 extends Node2D
 
-var folder := "res://countries_json/"
-var obj_poly = preload("res://Objects/Polygon.tscn")
+var folder_draw := "res://data/display/"
+var folder_coll := "res://data/collision/"
+var obj_area = preload("res://Objects/Area2D.tscn")
 var data = null
 
 
 func _ready() -> void:
-	# Background color
-	VisualServer.set_default_clear_color(Color(0,0,1,1.0))
-	
-	var poly_name = ''
 	# Gathering the data
-	for f in list_files_in_directory(folder, 0.1):
-		print(str(folder + f))
-		var file = File.new()
-		file.open(str(folder + f), file.READ)
-		var text = file.get_as_text()
-		file.close()
-		
-		var result_json = JSON.parse(text)
-		if result_json.error == OK:  # If parse OK
-			data = result_json.result
-#			print(typeof())
-		else:  # If parse has errors
-			print("Error: ", result_json.error)
-			print("Error Line: ", result_json.error_line)
-			print("Error String: ", result_json.error_string)
+	var files = list_files_in_directory(folder_draw)
 
-		var c = obj_poly.instance()
-		c.init(data)
-		poly_name = f.split('_', true, 0)[0]
-		c.set_name(poly_name)
-		add_child(c)
+	for f in files:
+		var data = []
+		for folder in [folder_draw, folder_coll]:
+			# Opening the file and reading it
+			var file = File.new()
+			file.open(folder + f, file.READ)
+			var text = file.get_as_text()
+			file.close()
+			# Parse JSON
+			var result_json = JSON.parse(text)
+			if result_json.error == OK:  # If parse OK
+				data.append(result_json.result)
+			else:  # If parse has errors
+				print("Error: ", result_json.error)
+				print("Error Line: ", result_json.error_line)
+				print("Error String: ", result_json.error_string)
+
+		if len(data) == 2:
+			var c = obj_area.instance()
+			c.init(country(data[0]), country(data[1]))
+			c.set_name(f.replace('.json', ''))
+			add_child(c)
+			print(len(data[0]), len(data[1]))
 
 
-func list_files_in_directory(path, thresh):
+func list_files_in_directory(path):
 	var files = []
 	var dir = Directory.new()
 	dir.open(path)
@@ -44,11 +45,24 @@ func list_files_in_directory(path, thresh):
 		var file = dir.get_next()
 		if file == "":
 			break
-		elif not file.begins_with(".") and str(thresh) in file:
+		elif not file.begins_with("."):
 			files.append(file)
-#		else:
-#			print(file)
 
 	dir.list_dir_end()
 	print(files)
 	return files
+
+
+func country(poly):
+	var country = []
+	for p in poly:
+		country.append(polygon(p))
+	return country
+
+
+func polygon(pts):
+	var points = PoolVector2Array()
+	for i in range(0, len(pts)):
+		points.push_back(Vector2(pts[i][0], pts[i][1]))
+	return points
+
