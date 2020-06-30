@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+DataLoader="*res://autoload/DataLoader.gd"
 SceneSwitcher="*res://autoload/SceneSwitcher.gd"
 
 [display]
