@@ -1,4 +1,4 @@
-,Country,Country info,Capital,Capital info,Capital hint,Flag,Flag similarity,Map,tags
-0,Antarctica,,,,,,,map-antarctica-nobox.png,UG::Continents
-1,Australia,,Canberra,,,flag-australia.png,"New Zealand (red stars, two fewer stars)",map-australia.png,UG::Oceania UG::Sovereign_State
-2,Bangladesh,,Dhaka,,,flag-bangladesh.png,,map-bangladesh.png,UG::Asia UG::Sovereign_State
+,Country,Country info,Capital,Capital info,Capital hint,Flag,Flag similarity,Polygon,tags
+0,Antarctica,,,,,,,antarctica.json,UG::Continents
+1,Australia,,Canberra,,,flag-australia.png,"New Zealand (red stars, two fewer stars)",australia.json,UG::Oceania UG::Sovereign_State
+2,Bangladesh,,Dhaka,,,flag-bangladesh.png,,bangladesh.json,UG::Asia UG::Sovereign_State
