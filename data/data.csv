@@ -1,0 +1,4 @@
+,Country,Country info,Capital,Capital info,Capital hint,Flag,Flag similarity,Map,tags
+0,Antarctica,,,,,,,map-antarctica-nobox.png,UG::Continents
+1,Australia,,Canberra,,,flag-australia.png,"New Zealand (red stars, two fewer stars)",map-australia.png,UG::Oceania UG::Sovereign_State
+2,Bangladesh,,Dhaka,,,flag-bangladesh.png,,map-bangladesh.png,UG::Asia UG::Sovereign_State
