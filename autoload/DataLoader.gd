@@ -12,6 +12,7 @@ func _ready() -> void:
 	polygons = collect_polygons(folder_draw, folder_coll)
 	print('Safely loaded ', len(polygons.keys()), ' countries with their polygons')
 	data = read_csv_file(data_path)
+#	data.shuffle()
 
 
 func read_csv_file(path):
@@ -20,13 +21,23 @@ func read_csv_file(path):
 	file.open(path, file.READ)
 	while !file.eof_reached():
 		var line = file.get_csv_line()
+		# Removing the index column
 		line.remove(0)
 		if len(line) > 0:
 			tab.append(line)
 	
 	file.close()
-	tab.pop_front()
 	return tab
+
+
+func column(title):
+	var index = Array(data[0]).find(title)
+	var column = []
+	for line in data:
+		# Adding the required value to the array
+		column.append(line[index])
+	column.pop_front()
+	return column
 
 
 func collect_polygons(f_draw, f_coll):
