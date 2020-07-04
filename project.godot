@@ -16,13 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Map"
-run/main_scene="res://Levels/EmptyScene.tscn"
+run/main_scene="res://Pages/EmptyScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 DataLoader="*res://autoload/DataLoader.gd"
-SceneSwitcher="*res://autoload/SceneSwitcher.gd"
+PageSwitcher="*res://autoload/PageSwitcher.gd"
 
 [display]
 

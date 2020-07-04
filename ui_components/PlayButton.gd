@@ -7,8 +7,9 @@ func _ready() -> void:
 
 
 func _on_button_up() -> void:
-	var a = get_parent().get_node("Options/CheckBox").is_pressed()
-	var b = get_parent().get_node("Options/CheckBox2").is_pressed()
-	var c = get_parent().get_node("Options/CheckBox3").is_pressed()
-	print(a, b, c)
-	SceneSwitcher.start_game([a, b, c])
+#	var a = get_parent().get_node("Options/CheckBox").is_pressed()
+#	var b = get_parent().get_node("Options/CheckBox2").is_pressed()
+#	var c = get_parent().get_node("Options/CheckBox3").is_pressed()
+#	print(a, b, c)
+#	SceneSwitcher.start_game([a, b, c])
+	PageSwitcher.start_game([])

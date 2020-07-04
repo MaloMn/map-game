@@ -5,7 +5,6 @@
 [ext_resource path="res://sources/bw.tres" type="DynamicFont" id=3]
 [ext_resource path="res://ui_components/PlayButton.tscn" type="PackedScene" id=4]
 
-
 [sub_resource type="Theme" id=1]
 
 [node name="StartScreen" type="Control"]
