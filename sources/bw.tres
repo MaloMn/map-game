@@ -1,7 +1,8 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://sources/ALBAS___.TTF" type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://sources/ALBAS___.TTF"
 
 [resource]
 size = 100
-font_data = ExtResource( 1 )
+font_data = SubResource( 1 )
