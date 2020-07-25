@@ -62,6 +62,7 @@ func get_random_names(column_name, value, nb):
 	
 
 func _input(event: InputEvent) -> void:
+	# Handle click on button
 	if event is InputEventMouseButton and active_button_name != "" and event.pressed:
 		_on_submit(active_button_name)
 
@@ -73,6 +74,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_submit(text):
 	if text == solution:
+		
 		PageSwitcher.next_level()
 	else:
 		print('Nope.')
