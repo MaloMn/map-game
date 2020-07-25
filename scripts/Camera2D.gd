@@ -28,6 +28,7 @@ func _input(event):
 		set_offset(get_offset() - event.relative*_current_zoom_level)
 		emit_signal("moved")
 
+
 func _update_zoom(incr, zoom_anchor):
 	var old_zoom = _current_zoom_level
 	_current_zoom_level += incr
