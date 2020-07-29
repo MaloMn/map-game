@@ -82,3 +82,17 @@ func list_files_in_directory(path):
 
 	dir.list_dir_end()
 	return files
+
+
+func get_random_names(column_name, value, nb):
+	var all_names = self.column(column_name)
+	all_names.erase(value)
+	
+	var names_choices = [value]
+	for i in range(nb - 1):
+		var selection = all_names[PageSwitcher.random_int(0, len(all_names) - 1)]
+		names_choices.append(selection)
+		all_names.erase(selection)
+
+	names_choices.shuffle()
+	return names_choices

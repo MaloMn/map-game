@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 DataLoader="*res://autoload/DataLoader.gd"
 PageSwitcher="*res://autoload/PageSwitcher.gd"
+Colors="*res://autoload/Colors.gd"
 
 [display]
 

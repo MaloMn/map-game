@@ -15,8 +15,8 @@ var start_scene = "res://Screens/StartScreen.tscn"
 
 
 func _ready():
-	goto_scene(start_scene, null)
-#	goto_scene('res://Pages/CountryLocation.tscn', 'Australia')
+#	goto_scene(start_scene, null)
+	goto_scene('res://Pages/CountryFlag.tscn', ['Australia','flag-australia.png'])
 
 
 func start_game(choices):
