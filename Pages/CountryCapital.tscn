@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sources/subs_os.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ui_components/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sources/ui_theme.tres" type="Theme" id=3]
-[ext_resource path="res://sources/title_bitter.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Objects/MultipleChoice.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Pages/CountryCapital.gd" type="Script" id=6]
+[ext_resource path="res://sources/info_os.tres" type="DynamicFont" id=9]
 
 [node name="Capital" type="Control"]
 anchor_right = 1.0
@@ -26,27 +27,40 @@ __meta__ = {
 }
 
 [node name="Capital" parent="." instance=ExtResource( 2 )]
-anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = -440.06
-margin_top = 110.37
-margin_right = 432.94
-margin_bottom = 272.37
-custom_fonts/font = ExtResource( 5 )
+margin_left = 70.0
+margin_top = 129.0
+margin_right = -81.0
+margin_bottom = 226.0
 custom_colors/font_color = Color( 0.180392, 0.227451, 0.45098, 1 )
-valign = 1
+
+[node name="InfoTitle" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.0
+margin_top = -308.952
+margin_right = 319.0
+margin_bottom = -210.952
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0.180392, 0.227451, 0.45098, 1 )
+bbcode_enabled = true
+bbcode_text = "[center] This is some more information about what this country is about. [/center]"
+text = " This is some more information about what this country is about. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Indication" parent="." instance=ExtResource( 2 )]
-anchor_top = 0.0
 anchor_bottom = 0.0
-margin_left = -436.01
-margin_top = 204.273
-margin_right = 436.99
-margin_bottom = 366.273
+margin_left = -436.0
+margin_top = 350.37
+margin_right = 437.0
+margin_bottom = 405.37
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.494118, 0.521569, 0.662745, 1 )
-text = "IS THE CAPITAL OF..."
-valign = 1
+text = "IS THE COUNTRY/CAPITAL OF..."
 
 [node name="Inline" type="ColorRect" parent="."]
 visible = false
@@ -92,32 +106,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MultipleChoice" type="ColorRect" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-color = Color( 1, 1, 1, 0 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MultipleChoice" parent="." instance=ExtResource( 4 )]
+margin_left = 436.28
+margin_top = 439.163
+margin_right = -420.72
+margin_bottom = -330.837
 
-[node name="GridContainer" type="GridContainer" parent="MultipleChoice"]
+[node name="InfoAnswer" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -710.0
-margin_top = -135.0
-margin_right = 710.0
-margin_bottom = 135.0
-custom_constants/vseparation = 20
-custom_constants/hseparation = 20
-columns = 2
+margin_left = -318.0
+margin_top = 266.712
+margin_right = 319.0
+margin_bottom = 364.712
+custom_fonts/normal_font = ExtResource( 9 )
+custom_colors/default_color = Color( 0.180392, 0.227451, 0.45098, 1 )
+bbcode_enabled = true
+bbcode_text = "[center] This is some more information about what this country is about. [/center]"
+text = " This is some more information about what this country is about. "
 __meta__ = {
 "_edit_use_anchors_": false
 }

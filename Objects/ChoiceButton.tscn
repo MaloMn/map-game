@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sources/checkboxes/empty.png" type="Texture" id=1]
-[ext_resource path="res://sources/rounded_rect.tres" type="StyleBox" id=2]
+[ext_resource path="res://sources/rounded_rect_white.tres" type="StyleBox" id=2]
 [ext_resource path="res://Objects/ChoiceButton.gd" type="Script" id=3]
+[ext_resource path="res://sources/ui_theme.tres" type="Theme" id=4]
 
 [node name="Choice1" type="PanelContainer"]
-margin_right = 700.0
-margin_bottom = 125.0
-rect_min_size = Vector2( 700, 125 )
+margin_right = 122.0
+margin_bottom = 55.0
 mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
 custom_styles/panel = ExtResource( 2 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -16,18 +19,16 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 700.0
-margin_bottom = 125.0
+margin_right = 209.0
+margin_bottom = 55.0
 mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 289.0
-margin_top = 35.0
-margin_right = 411.0
-margin_bottom = 90.0
+margin_right = 209.0
+margin_bottom = 55.0
 custom_constants/separation = 25
 
 [node name="Box" type="TextureRect" parent="CenterContainer/HBoxContainer"]
@@ -40,7 +41,6 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
 margin_left = 80.0
-margin_top = 20.0
-margin_right = 122.0
-margin_bottom = 34.0
+margin_right = 209.0
+margin_bottom = 55.0
 text = "France"
