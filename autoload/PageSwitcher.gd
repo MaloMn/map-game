@@ -15,8 +15,9 @@ var start_scene = "res://Screens/StartScreen.tscn"
 
 
 func _ready():
+#	pass
 #	goto_scene(start_scene, null)
-	goto_scene('res://Pages/CountryFlag.tscn', ['Australia','flag-australia.png'])
+	goto_scene('res://Pages/CountryLocation.tscn', 'australia')
 
 
 func start_game(choices):
@@ -42,12 +43,12 @@ func next_level():
 			var b = possibilities[i][1]
 			if line[a] and line[b]:
 				# If we have some data corresponding to the page
-				pages_data.append([line[a], line[b]])
+#				pages_data.append([line[a], line[b]])
 				pages_possible.append(pages[i])
 		
 		if len(pages_possible) > 0:
 			var index = random_int(0, len(pages_possible) - 1)
-			goto_scene(pages_possible[index], pages_data[index])
+			goto_scene(pages_possible[index], line[10])
 
 
 func goto_scene(path, param):

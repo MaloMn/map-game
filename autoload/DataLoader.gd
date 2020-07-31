@@ -1,17 +1,30 @@
 extends Node
 
-var folder_draw: String = "res://data/display/"
-var folder_coll: String = "res://data/collision/"
 var data_path: String = "res://data/data.csv"
-var polygons: Dictionary = {}
 var data = []
 
+# Folder used
+# Keep them here in case there are name changes in the futur
+var folder_draw := "res://data/display/"
+var folder_coll := "res://data/collision/"
+var folder_pinpoint := "res://data/pinpoint/"
+var folder_flag := "res://data/flag/"
 
-# Called when the node enters the scene tree for the first time.
+# Variable containing external data
+var polygons: Dictionary = {}
+var pinpoints: Dictionary = {}
+var flags: Dictionary = {}
+
+
 func _ready() -> void:
-	polygons = collect_polygons(folder_draw, folder_coll)
-	print('Safely loaded ', len(polygons.keys()), ' countries with their polygons')
 	data = read_csv_file(data_path)
+
+	polygons = collect_polygons()
+	pinpoints = collect_pinpoints()
+	flags = collect_flags()
+	
+	print("Loaded ", len(polygons), " polygons.")
+	check_external_data()
 #	data.shuffle()
 
 
@@ -40,31 +53,44 @@ func column(title):
 	return column
 
 
-func collect_polygons(f_draw, f_coll):
-	var files = list_files_in_directory(f_draw)
-	var data: Dictionary = {}
-	for f in files:
-		var country = []
-		for folder in [f_draw, f_coll]:
-			# Opening the file and reading it
-			var file = File.new()
-			file.open(folder + f, file.READ)
-			var text = file.get_as_text()
-			file.close()
-			# Parse JSON
-			var result_json = JSON.parse(text)
-			if result_json.error == OK:  # If parse OK
-				country.append(result_json.result)
-			else:  # If parse has errors
-				print("Error: ", result_json.error)
-				print("Error Line: ", result_json.error_line)
-				print("Error String: ", result_json.error_string)
-		
-		# data will be ordered the following way:
-		# data['country_name'] = [display_polygon, collision_polygon]
-		data[f.replace('.json', '')] = country
-		
-	return data
+func collect_flags():
+	var column_polygon = column('Flag')
+	var output = {}
+
+	for i in range(len(column_polygon)):
+		if column_polygon[i] == 'x':
+			var country_short = data[i + 1][10]
+			var flag = load(folder_flag + 'flag-' + country_short + '.png')
+			output[country_short] = flag
+	return output
+
+
+func collect_pinpoints():
+	var column_polygon = column('Pinpoint')
+	var output = {}
+
+	for i in range(len(column_polygon)):
+		if column_polygon[i] == 'x':
+			var country_short = data[i + 1][10]
+			var city = get_json(folder_pinpoint + country_short + '.json')
+			output[country_short] = city
+	return output
+
+
+func collect_polygons():
+	var column_polygon = column('Polygon')
+	var output = {}
+
+	for i in range(len(column_polygon)):
+		if column_polygon[i] == 'x':
+			var country = []
+			var country_short = data[i + 1][10]
+
+			for folder in [folder_draw, folder_coll]:
+				country.append(get_json(folder + country_short + '.json'))
+
+			output[country_short] = country
+	return output
 
 
 func list_files_in_directory(path):
@@ -96,3 +122,45 @@ func get_random_names(column_name, value, nb):
 
 	names_choices.shuffle()
 	return names_choices
+
+
+func get_json(filename):
+	var file = File.new()
+	file.open(filename, file.READ)
+	var text = file.get_as_text()
+	file.close()
+	# Parse JSON
+	var result_json = JSON.parse(text)
+	if result_json.error == OK:  
+		# If parse OK
+		return result_json.result
+	else:  
+		# If parse has errors
+		print("Error: ", result_json.error)
+		print("Error Line: ", result_json.error_line)
+		print("Error String: ", result_json.error_string)
+		return null
+
+
+func check_external_data():
+	# Checks that there isn't any null object in the external data.
+	var error = false
+	for p in polygons.values():
+		if p[0] == null or p[1] == null:
+			error = true
+	for p in pinpoints.values():
+		if p == null:
+			error = true
+	for p in flags:
+		if p == null:
+			error = true
+			
+	if error:
+		print('Some data is  "null", something\'s not right!')
+	else:
+		print('No null object was found in imported external data.')
+
+
+func get_line_of_short(shortname):
+	var index = Array(column('short')).find(shortname)
+	return data[index + 1]
