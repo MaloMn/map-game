@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/world_generator.gd" type="Script" id=1]
+[ext_resource path="res://Pages/CountryLocation.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://sources/title_bitter.tres" type="DynamicFont" id=3]
 [ext_resource path="res://sources/ui_theme.tres" type="Theme" id=4]
@@ -29,10 +29,12 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/PanelContainer"]
 margin_right = 358.0
-margin_bottom = 109.0
+margin_bottom = 97.0
 theme = ExtResource( 4 )
 custom_fonts/font = ExtResource( 3 )
 text = "Country"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -37,10 +37,12 @@ func _physics_process(delta: float) -> void:
 		multiple.rect_position = Vector2(margin, (1-ratio)*winsize[1])
 
 
-func init(data):
+func init(shortname):
 	# Setting question and answer
-	flag_path = load("res://data/flag/" + data[1])
-	solution = data[0]
+	var line = DataLoader.get_line_of_short(shortname)
+	flag_path = DataLoader.flags[shortname]
+	print(flag_path)
+	solution = line[0]
 	choices = DataLoader.get_random_names('Country', solution, 4)
 
 	print(flag_path, ' ', solution, ' ', choices)
