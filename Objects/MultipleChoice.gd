@@ -13,6 +13,7 @@ var _active_button_name = null
 var _parent = null
 var _solution = null
 var _clicked = false
+signal clicked
 
 var timeout = 3.0  # in seconds
 
@@ -76,7 +77,7 @@ func _check_answer(answer):
 	# Setting background green
 	get_node(_solution).set('custom_styles/panel', background['green'])
 	get_node(_solution).right()
-	
+	emit_signal("clicked")
 	if _solution != answer:
 		get_node(answer).set('custom_styles/panel', background['red'])
 		get_node(answer).wrong()
