@@ -13,6 +13,13 @@ var BG = Color("#f6f7fa")
 var TEXT = Color("#2e3a73")
 var SUBS = Color("#7e85a9")
 
+# World Map
+var COUNTRY = Color("#7e85a9")
+var COUNTRY_MOUSE_OVER = Color("#2e3a73")
+var COUNTRY_GOOD = Color("#2c6d40")
+var COUNTRY_BAD = Color("#6e2e2e")
 
-func _ready() -> void:
-	pass
+# Cities
+# Choice between EF6F6C 2C302E FFE45E
+var CITY = Color('#2C302E')
+var CITY_OVER = Color('#EF6F6C')
