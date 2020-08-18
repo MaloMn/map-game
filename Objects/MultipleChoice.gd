@@ -56,7 +56,7 @@ func init(parent, choices, solution):
 
 func _input(event: InputEvent) -> void:
 	# Handle click on button
-	if event is InputEventMouseButton and _active_button_name and !_clicked and event.pressed:
+	if Input.is_action_pressed("left_click") and _active_button_name and !_clicked:
 		_clicked = true
 		_check_answer(_active_button_name)
 
