@@ -11,15 +11,10 @@ var text_info_answer = ""
 
 
 func _ready() -> void:
+	get_tree().get_root().connect("size_changed", self, "_update_viewport")
+	_update_viewport()
+	
 	get_node("VBoxContainer/MultipleChoice").connect("clicked", self, "clicked")
-
-
-func _physics_process(delta: float) -> void:
-	var container = get_node("VBoxContainer")
-#	var mult_choice = get_node("VBoxContainer/MultipleChoice")
-	if container.rect_size[0] > OS.window_size[0]:
-		container.rect_size = OS.window_size
-		container.rect_position = Vector2(0, 0)
 
 
 func init(shortname, start=PageSwitcher.random_int(0, 1)):
@@ -69,3 +64,10 @@ func init(shortname, start=PageSwitcher.random_int(0, 1)):
 func clicked():
 	var info_answer = get_node("VBoxContainer/InfoAnswer")
 	info_answer.bbcode_text = "[center]" + text_info_answer + "[/center]"
+
+
+func _update_viewport():
+	var container = get_node("VBoxContainer")
+	if container.rect_size[0] + 40 > OS.window_size[0]:
+		container.rect_size[0] = OS.window_size[0] - 40
+		container.rect_position = Vector2(20, 0)
