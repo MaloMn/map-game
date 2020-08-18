@@ -1,26 +1,35 @@
 extends Node2D
 
-onready var data = $"/root/DataLoader"
-onready var switcher = $"/root/PageSwitcher"
-var obj_area = preload("res://Objects/Area2D.tscn")
+var obj_country = preload("res://Objects/Area2D.tscn")
 var obj_city = preload("res://Objects/City.tscn")
 
-var question = ""
+var _shortname = ""
+var _capital = ""
 
+var _clicked = false
+
+var timeout = 3.0  # in seconds
 
 func _ready() -> void:
+	# Drawing the world map without interactivity
 	var poly = []
-	for country in data.polygons.keys():
-		poly = data.polygons[country]
-		if len(poly) >= 3:
-			var a = obj_area.instance()
+	for country in DataLoader.polygons.keys():
+		poly = DataLoader.polygons[country]
+		if len(poly) >= 2:
+			var a = obj_country.instance()
 			a.init(_country(poly[0]), [])
 			a.set_name(country)
 			add_child(a)
-			
+
+	# Drawing the cities with interactivity
+	var pin = []
+	for city in DataLoader.pinpoints.keys():
+		pin = DataLoader.pinpoints[city]
+#		pin = [pin[1], pin[0]]
+		if len(pin) == 2:
 			var c = obj_city.instance()
-			c.init(poly[2])
-			c.set_name(country + "_city")
+			c.init(pin)
+			c.set_name(city + "_city")
 			add_child(c)
 
 
@@ -39,13 +48,15 @@ func _polygon(pts):
 	
 	
 func init(shortname):
-	var line = data.get_line_of_short(shortname)
-	question = line[2]
+	_shortname = shortname
+	var line = DataLoader.get_line_of_short(_shortname)
+	_capital = line[2]
 	# TODO: add line[3] for the subtext
-	get_node("CanvasLayer/PanelContainer/Label").text = question
+	get_node("CanvasLayer/PanelContainer/Label").text = _capital
 
 
-func check_answer(answer):
-	if question.to_lower() == answer.to_lower():
-		print("Yep, it was ", question)
-		switcher.next_level()
+func check_answer(a_shortname):
+	_clicked = true
+	get_node(_shortname + "_city").set_modulate(Colors.COUNTRY_GOOD)
+	if a_shortname != _shortname:
+		get_node(a_shortname + "_city").set_modulate(Colors.COUNTRY_BAD)

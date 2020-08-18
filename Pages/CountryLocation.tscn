@@ -40,6 +40,6 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 964.875, 538.535 )
+position = Vector2( 180, 90 )
 current = true
 script = ExtResource( 2 )

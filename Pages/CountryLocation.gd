@@ -1,11 +1,12 @@
 extends Node2D
 
-#onready var data = $"/root/DataLoader"
-onready var switcher = $"/root/PageSwitcher"
-var obj_area = preload("res://Objects/Area2D.tscn")
+var obj_area = preload("res://Objects/Country.tscn")
 
 var question = ""
+var _shortname = ""
+var _clicked = false
 
+var timeout = 3.0  # in seconds
 
 func _ready() -> void:
 	var poly = []
@@ -34,16 +35,20 @@ func _polygon(pts):
 	
 func init(shortname):
 	var line = DataLoader.get_line_of_short(shortname)
+	_shortname = shortname
 	question = line[0]
 	get_node("CanvasLayer/PanelContainer/Label").text = question
 
 
-func check_answer(answer):
-	if question.to_lower() == answer.to_lower():
-		print("Yep, it was ", question)
-		switcher.next_level()
+func check_answer(a_shortname):
+	_clicked = true
+	get_node(_shortname).set_modulate(Colors.COUNTRY_GOOD)
+	if a_shortname != _shortname:
+		get_node(a_shortname).set_modulate(Colors.COUNTRY_BAD)
+	yield(get_tree().create_timer(timeout), "timeout")
+	PageSwitcher.next_level()
 
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		print(event.position)
+#func _input(event: InputEvent) -> void:
+#	if event is InputEventMouseButton and event.pressed:
+#		print(event.position)
