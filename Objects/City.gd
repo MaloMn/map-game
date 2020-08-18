@@ -2,16 +2,21 @@ extends Area2D
 
 #export (Color, RGB) var mouse_out
 #export (Color, RGB) var mouse_over
-var mouse_out = Color(0.0, 0.0, 0.0)
-var mouse_over = Color(0.0, 1.0, 0.0)
+var mouse_out = Colors.CITY
+var mouse_over = Colors.CITY_OVER
+var color = Color(1.0, 1.0, 1.0)
 
-var color = PoolColorArray([Color(1.0, 1.0, 1.0)])
 var poly_pts = []
-var _on_country = false
+var circle_disp = []
+var center = Vector2(0, 0)
+var radius = 0
+
+var _on_city = false
 
 
 func _draw():
-	draw_polygon(poly_pts, color)
+	draw_polygon(circle_disp, PoolColorArray([color]))
+#	draw_circle(center, radius, color)
 
 
 func init(pts_center):
@@ -20,9 +25,11 @@ func init(pts_center):
 	set_modulate(mouse_out)
 	
 	# Coordinates of city pinpoint
-	poly_pts = _circle(pts_center, 10)
-	var circle_coll = _circle(pts_center, 30)
+	center = Vector2(pts_center[0], pts_center[1])
+	radius = 1
+	circle_disp = _circle(center, radius, 4)
 	
+	var circle_coll = _circle(center, radius * 2, 10)
 	var collision = CollisionPolygon2D.new()
 	collision.set_name("CollisionCircle")
 	add_child(collision)
@@ -30,22 +37,25 @@ func init(pts_center):
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and _on_country:
-		get_parent().check_answer(self.name)
+	if Input.is_action_pressed("left_click") and _on_city:
+		get_parent().check_answer(self.name.replace('_city', ''))
+		print(self.name.replace('_city', ''))
 
 
 func _on_Area2D_mouse_entered() -> void:
 	set_modulate(mouse_over)
-	_on_country = true
+	_on_city = true
 
 
 func _on_Area2D_mouse_exited() -> void:
 	set_modulate(mouse_out)
-	_on_country = false
+	_on_city = false
 
 
-func _circle(center, radius, error=0.5):
+func _circle(center, radius, nb_pts):
 	var points = PoolVector2Array()
-	for i in range(0, 2*PI, error):
-		points.push_back(Vector2(center[0] + cos(i), center[1] + sin(i)) * radius)
+	for i in range(nb_pts):
+		var radian = i*2*PI/nb_pts
+		var pts = Vector2(cos(radian), sin(radian))*radius + center
+		points.push_back(pts)
 	return points
