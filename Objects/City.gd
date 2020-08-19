@@ -43,19 +43,21 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_Area2D_mouse_entered() -> void:
-	set_modulate(mouse_over)
-	_on_city = true
+	if !get_parent()._clicked:
+		set_modulate(mouse_over)
+		_on_city = true
 
 
 func _on_Area2D_mouse_exited() -> void:
-	set_modulate(mouse_out)
-	_on_city = false
+	if !get_parent()._clicked:
+		set_modulate(mouse_out)
+		_on_city = false
 
 
-func _circle(center, radius, nb_pts):
+func _circle(c, r, nb_pts):
 	var points = PoolVector2Array()
 	for i in range(nb_pts):
 		var radian = i*2*PI/nb_pts
-		var pts = Vector2(cos(radian), sin(radian))*radius + center
+		var pts = Vector2(cos(radian), sin(radian))*r + c
 		points.push_back(pts)
 	return points
