@@ -47,8 +47,3 @@ func check_answer(a_shortname):
 		get_node(a_shortname).set_modulate(Colors.COUNTRY_BAD)
 	yield(get_tree().create_timer(timeout), "timeout")
 	PageSwitcher.next_level()
-
-
-#func _input(event: InputEvent) -> void:
-#	if event is InputEventMouseButton and event.pressed:
-#		print(event.position)
