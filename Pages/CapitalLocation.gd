@@ -1,11 +1,10 @@
 extends Node2D
 
-var obj_country = preload("res://Objects/Area2D.tscn")
+var obj_country = preload("res://Objects/Country.tscn")
 var obj_city = preload("res://Objects/City.tscn")
 
 var _shortname = ""
 var _capital = ""
-
 var _clicked = false
 
 var timeout = 3.0  # in seconds
@@ -57,6 +56,10 @@ func init(shortname):
 
 func check_answer(a_shortname):
 	_clicked = true
+	# Coloring the answer and/or the solution
 	get_node(_shortname + "_city").set_modulate(Colors.COUNTRY_GOOD)
 	if a_shortname != _shortname:
 		get_node(a_shortname + "_city").set_modulate(Colors.COUNTRY_BAD)
+
+	yield(get_tree().create_timer(timeout), "timeout")
+	PageSwitcher.next_level()
