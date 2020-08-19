@@ -35,11 +35,6 @@ func _input(event):
 
 	elif event is InputEventMouseMotion && _drag:
 		_update_position(event.relative)
-#		print(get_viewport_transform(),' ', get_viewport().size, ' ', _current_zoom_level)
-#		set_offset(get_offset() - event.relative*_current_zoom_level)
-#		print(self.offset)
-
-#	print(get_offset())
 
 
 func _update_zoom(incr, zoom_anchor):
@@ -55,13 +50,12 @@ func _update_zoom(incr, zoom_anchor):
 	var zoom_center = zoom_anchor - get_offset()
 	var ratio = 1 - _current_zoom_level/old_zoom
 	
-	# Need to compute futur boundary and see if anything stands out
 	# Computing futur boundary (according to newly computed _current_zoom_level)
 	_compute_boundary()
 	var futur_offset = get_offset() + zoom_center*ratio
-	futur_offset = _correct_offset(futur_offset)
 	
-	# Need to correct the offset if it goes out of the map
+	# Correcting the offset
+	futur_offset = _correct_offset(futur_offset)
 	
 	# Execution of the movements
 	set_offset(futur_offset)
@@ -72,7 +66,6 @@ func _update_position(relative):
 	var new = get_offset() - relative*_current_zoom_level
 	new = _correct_offset(new)
 	set_offset(new)
-	print(self.offset)
 
 
 func _correct_offset(wanted_offset):
@@ -106,4 +99,3 @@ func _compute_boundary():
 		_boundary[0] = _max_boundary[0]
 	if _boundary[1] < _max_boundary[1]:
 		_boundary[1] = _max_boundary[1]
-		
