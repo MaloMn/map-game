@@ -6,7 +6,7 @@ var question = ""
 var _shortname = ""
 var _clicked = false
 
-var timeout = 3.0  # in seconds
+var timeout = 2.0  # in seconds
 
 func _ready() -> void:
 	var poly = []
@@ -40,10 +40,17 @@ func init(shortname):
 	get_node("CanvasLayer/PanelContainer/Label").text = question
 
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_pressed("ui_accept") and _clicked:
+		PageSwitcher.next_level()
+
+
 func check_answer(a_shortname):
 	_clicked = true
+
+	# Coloring the answer and/or the solution
 	get_node(_shortname).set_modulate(Colors.COUNTRY_GOOD)
 	if a_shortname != _shortname:
 		get_node(a_shortname).set_modulate(Colors.COUNTRY_BAD)
-	yield(get_tree().create_timer(timeout), "timeout")
-	PageSwitcher.next_level()
+
+	$"Camera2D".animate_wrong_answer(get_node(_shortname).bounding_box(), timeout)

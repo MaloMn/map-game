@@ -1,12 +1,13 @@
 extends Camera2D
 
-const MAX_ZOOM_LEVEL = 0.05
+const MAX_ZOOM_LEVEL = 0.03
 var MIN_ZOOM_LEVEL = 1
 const ZOOM_INCREMENT = 0.01
 var _max_boundary = Vector2()
 
 var map_width = 360.0
 var map_height = 180.0
+var size = null
 
 var _current_zoom_level = 1
 var _boundary = Vector2()
@@ -14,6 +15,7 @@ var _drag = false
 
 
 func _ready():
+	size = get_viewport().size
 	_update_viewport()
 	get_tree().get_root().connect("size_changed", self, "_update_viewport")
 
@@ -76,11 +78,11 @@ func _correct_offset(wanted_offset):
 
 
 func _update_viewport():
-	var size = get_viewport().size
+	size = get_viewport().size
 	MIN_ZOOM_LEVEL = min(map_width/float(size[0]), map_height/float(size[1]))
 	
 	# Actual zooming action 
-	var start_zoom_increment = min(map_width/size[0], map_height/size[1]) - _current_zoom_level
+	var start_zoom_increment = MIN_ZOOM_LEVEL - _current_zoom_level
 	_update_zoom(start_zoom_increment, Vector2(0, 0))
 	
 	# Setting of the variable that prevent moving out of the map
@@ -99,3 +101,22 @@ func _compute_boundary():
 		_boundary[0] = _max_boundary[0]
 	if _boundary[1] < _max_boundary[1]:
 		_boundary[1] = _max_boundary[1]
+
+
+func animate_wrong_answer(box, time, margin=50):
+	# Basically animate a path to the right country position 
+	# from the current position
+	if typeof(box) == 5:
+		box = [box[1], box[0], box[1], box[0]]
+		
+	var end_position = Vector2(((box[1] + box[3]) - map_width)/2, ((box[0] + box[2]) - map_height)/2)
+	var end_zoom = max((abs(box[1] - box[3]) + margin)/size[0], (abs(box[0] - box[2]) + margin)/size[1])
+	_current_zoom_level = end_zoom
+	end_zoom = Vector2(end_zoom, end_zoom)
+	
+	# Move
+	var tween = Tween.new()
+	self.add_child(tween)
+	tween.targeting_property(self, "offset", self, "offset", end_position, time, 0, 1)
+	tween.targeting_property(self, "zoom", self, "zoom", end_zoom, time, 0, 1)
+	tween.start()

@@ -1,7 +1,5 @@
 extends Area2D
 
-#export (Color, RGB) var mouse_out
-#export (Color, RGB) var mouse_over
 var mouse_out = Colors.CITY
 var mouse_over = Colors.CITY_OVER
 var color = Color(1.0, 1.0, 1.0)
@@ -16,7 +14,6 @@ var _on_city = false
 
 func _draw():
 	draw_polygon(circle_disp, PoolColorArray([color]))
-#	draw_circle(center, radius, color)
 
 
 func init(pts_center):

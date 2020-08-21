@@ -7,9 +7,9 @@ onready var current_scene = root.get_child(root.get_child_count() -1)
 
 var pages: Array = ["res://Pages/CountryCapital.tscn",
 					"res://Pages/CountryLocation.tscn",
-					"res://Pages/CountryFlag.tscn"]
-#					"res://Pages/CapitalLocation.tscn"]
-var possibilities = [[0, 2], [0, 7], [0, 5]]#, [2, 8]]
+					"res://Pages/CountryFlag.tscn",
+					"res://Pages/CapitalLocation.tscn"]
+var possibilities = [[0, 2], [0, 7], [0, 5], [2, 8]]
 
 var start_scene = "res://Screens/StartScreen.tscn"
 
@@ -17,7 +17,7 @@ var start_scene = "res://Screens/StartScreen.tscn"
 func _ready():
 #	pass
 #	goto_scene(start_scene, null)
-	goto_scene('res://Pages/CountryLocation.tscn', 'australia')
+	goto_scene('res://Pages/CountryLocation.tscn', 'bangladesh')
 
 
 func start_game(choices):
