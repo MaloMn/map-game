@@ -67,4 +67,4 @@ func check_answer(a_shortname):
 	if a_shortname != _shortname:
 		get_node(a_shortname + "_city").set_modulate(Colors.COUNTRY_BAD)
 
-	$"Camera2D".animate_wrong_answer(get_node(_shortname + "_city").center, timeout)
+	$"Camera2D".animate_answer(get_node(_shortname + "_city").center, timeout)

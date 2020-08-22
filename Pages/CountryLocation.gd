@@ -53,4 +53,4 @@ func check_answer(a_shortname):
 	if a_shortname != _shortname:
 		get_node(a_shortname).set_modulate(Colors.COUNTRY_BAD)
 
-	$"Camera2D".animate_wrong_answer(get_node(_shortname).bounding_box(), timeout)
+	$"Camera2D".animate_answer(get_node(_shortname).bounding_box(), timeout)
