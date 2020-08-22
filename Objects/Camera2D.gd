@@ -28,11 +28,9 @@ func _input(event):
 		_drag = false
 
 	elif event.is_action("cam_zoom_in"):
-#		print(get_viewport_transform(), get_viewport_rect())
 		_update_zoom(-ZOOM_INCREMENT, get_local_mouse_position())
 
 	elif event.is_action("cam_zoom_out"):
-#		print(get_viewport_transform(), get_viewport_rect())
 		_update_zoom(ZOOM_INCREMENT, get_local_mouse_position())
 
 	elif event is InputEventMouseMotion && _drag:
