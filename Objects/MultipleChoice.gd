@@ -15,7 +15,7 @@ var _solution = null
 var _clicked = false
 signal clicked
 
-var timeout = 3.0  # in seconds
+#var timeout = 3.0  # in seconds
 
 
 func _ready() -> void:
@@ -78,9 +78,7 @@ func _check_answer(answer):
 	get_node(_solution).set('custom_styles/panel', background['green'])
 	get_node(_solution).right()
 	emit_signal("clicked")
+	
 	if _solution != answer:
 		get_node(answer).set('custom_styles/panel', background['red'])
 		get_node(answer).wrong()
-	
-	yield(get_tree().create_timer(timeout), "timeout")
-	PageSwitcher.next_level()
