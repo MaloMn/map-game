@@ -8,6 +8,7 @@ var solution = ""
 var choices = []
 
 var active_button_name = ""
+var _is_clicked = false
 var button = preload("res://Objects/ChoiceButton.tscn")
 
 var margin = 10.0
@@ -17,6 +18,8 @@ var ratio = 0.3
 func _ready() -> void:
 	get_tree().get_root().connect("size_changed", self, "_update_viewport")
 	_update_viewport()
+	
+	get_node("MultipleChoice").connect("clicked", self, "_clicked")
 	
 	multiple.add_constant_override("hseparation", margin)
 	multiple.add_constant_override("vseparation", margin) 
@@ -54,3 +57,13 @@ func _update_viewport():
 		# MultipleChoice position and size
 		multiple.rect_size = Vector2(width, ratio*winsize[1] - margin)
 		multiple.rect_position = Vector2((winsize[0] - width)/2, (1-ratio)*winsize[1])
+
+
+func _clicked():
+	_is_clicked = true
+
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_pressed("ui_accept") and _is_clicked:
+		PageSwitcher.next_level()
+ 
