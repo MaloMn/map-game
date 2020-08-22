@@ -103,16 +103,21 @@ func _compute_boundary():
 		_boundary[1] = _max_boundary[1]
 
 
-func animate_wrong_answer(box, time, margin=50):
+func animate_answer(box, time, margin=50):
 	# Basically animate a path to the right country position 
 	# from the current position
 	if typeof(box) == 5:
 		box = [box[1], box[0], box[1], box[0]]
-		
-	var end_position = Vector2(((box[1] + box[3]) - map_width)/2, ((box[0] + box[2]) - map_height)/2)
+	
+	# Zooming onto the specified box
 	var end_zoom = max((abs(box[1] - box[3]) + margin)/size[0], (abs(box[0] - box[2]) + margin)/size[1])
-	_current_zoom_level = end_zoom
-	end_zoom = Vector2(end_zoom, end_zoom)
+	_current_zoom_level = min(end_zoom, MIN_ZOOM_LEVEL)
+	end_zoom = Vector2(_current_zoom_level, _current_zoom_level)
+	
+	# Spatial ending position
+	_compute_boundary()
+	var end_position = Vector2(((box[1] + box[3]) - map_width)/2, ((box[0] + box[2]) - map_height)/2)
+	end_position = _correct_offset(end_position)
 	
 	# Move
 	var tween = Tween.new()
