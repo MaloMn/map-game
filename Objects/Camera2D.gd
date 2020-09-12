@@ -1,8 +1,8 @@
 extends Camera2D
 
-const MAX_ZOOM_LEVEL = 0.03
+const MAX_ZOOM_LEVEL = 0.0003
 var MIN_ZOOM_LEVEL = 1
-const ZOOM_INCREMENT = 0.01
+const ZOOM_INCREMENT = 0.001
 var _max_boundary = Vector2()
 
 var map_width = 360.0
@@ -40,10 +40,10 @@ func _input(event):
 func _update_zoom(incr, zoom_anchor):
 	var old_zoom = _current_zoom_level
 	_current_zoom_level += incr
-	if _current_zoom_level < MAX_ZOOM_LEVEL:
-		_current_zoom_level = MAX_ZOOM_LEVEL
-	elif _current_zoom_level > MIN_ZOOM_LEVEL:
-		_current_zoom_level = MIN_ZOOM_LEVEL
+	
+	_current_zoom_level = max(_current_zoom_level, MAX_ZOOM_LEVEL)
+	_current_zoom_level = min(_current_zoom_level, MIN_ZOOM_LEVEL)
+
 	if old_zoom == _current_zoom_level:
 		return
 	
@@ -95,21 +95,29 @@ func _compute_boundary():
 	var width_out = map_width - size[0] * _current_zoom_level
 	var height_out = map_height - size[1] * _current_zoom_level
 	_boundary = [width_out/2, height_out/2]
-	if _boundary[0] < _max_boundary[0]:
-		_boundary[0] = _max_boundary[0]
-	if _boundary[1] < _max_boundary[1]:
-		_boundary[1] = _max_boundary[1]
+	
+	_boundary[0] = max(_boundary[0], _max_boundary[0])
+	_boundary[1] = max(_boundary[1], _max_boundary[1])
+	
+#	if _boundary[0] < _max_boundary[0]:
+#		_boundary[0] = _max_boundary[0]
+#	if _boundary[1] < _max_boundary[1]:
+#		_boundary[1] = _max_boundary[1]
 
 
-func animate_answer(box, time, margin=50):
-	# Basically animate a path to the right country position 
-	# from the current position
+func animate_answer(box, time):
+	# Animate a path to the right country position from the current position
+	# If box is a Vector2
 	if typeof(box) == 5:
 		box = [box[1], box[0], box[1], box[0]]
+	
+	var margin = max(abs(box[1] - box[3]), abs(box[0] - box[2])) / 2
+	margin = max(50, margin)
 	
 	# Zooming onto the specified box
 	var end_zoom = max((abs(box[1] - box[3]) + margin)/size[0], (abs(box[0] - box[2]) + margin)/size[1])
 	_current_zoom_level = min(end_zoom, MIN_ZOOM_LEVEL)
+	_current_zoom_level = max(_current_zoom_level, MAX_ZOOM_LEVEL)
 	end_zoom = Vector2(_current_zoom_level, _current_zoom_level)
 	
 	# Spatial ending position
