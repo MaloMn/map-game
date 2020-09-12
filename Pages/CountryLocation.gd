@@ -11,6 +11,7 @@ var timeout = 2.0  # in seconds
 func _ready() -> void:
 	var poly = []
 	for country in DataLoader.polygons.keys():
+#		print(country)
 		poly = DataLoader.polygons[country]
 		if len(poly) >= 2:
 			var a = obj_area.instance()
@@ -37,6 +38,7 @@ func init(shortname):
 	var line = DataLoader.get_line_of_short(shortname)
 	_shortname = shortname
 	question = line[0]
+	print(line, _shortname, question)
 	get_node("CanvasLayer/PanelContainer/Label").text = question
 
 
