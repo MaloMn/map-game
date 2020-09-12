@@ -5,10 +5,10 @@ var data = []
 
 # Folder used
 # Keep them here in case there are name changes in the futur
-var folder_draw := "res://data/display/"
-var folder_coll := "res://data/collision/"
-var folder_pinpoint := "res://data/pinpoint/"
-var folder_flag := "res://data/flag/"
+var folder_draw := "res://data/polygons_display/"
+var folder_coll := "res://data/polygons_collision/"
+var folder_pinpoint := "res://data/pinpoints/"
+var folder_flag := "res://data/flags/"
 
 # Variable containing external data
 var polygons: Dictionary = {}
@@ -25,8 +25,7 @@ func _ready() -> void:
 	
 	print("Loaded ", len(polygons), " polygons.")
 	check_external_data()
-#	data.shuffle()
-
+	
 
 func read_csv_file(path):
 	var tab = []
@@ -59,9 +58,11 @@ func collect_flags():
 
 	for i in range(len(column_polygon)):
 		if column_polygon[i] == 'x':
-			var country_short = data[i + 1][10]
-			var flag = load(folder_flag + 'flag-' + country_short + '.png')
+			var country_short = data[i + 1][9]
+#			print(country_short)
+			var flag = load(folder_flag + country_short + '.png')
 			output[country_short] = flag
+
 	return output
 
 
@@ -71,7 +72,7 @@ func collect_pinpoints():
 
 	for i in range(len(column_polygon)):
 		if column_polygon[i] == 'x':
-			var country_short = data[i + 1][10]
+			var country_short = data[i + 1][9]
 			var city = get_json(folder_pinpoint + country_short + '.json')
 			output[country_short] = city
 	return output
@@ -84,7 +85,7 @@ func collect_polygons():
 	for i in range(len(column_polygon)):
 		if column_polygon[i] == 'x':
 			var country = []
-			var country_short = data[i + 1][10]
+			var country_short = data[i + 1][9]
 
 			for folder in [folder_draw, folder_coll]:
 				country.append(get_json(folder + country_short + '.json'))
@@ -139,6 +140,7 @@ func get_json(filename):
 		print("Error: ", result_json.error)
 		print("Error Line: ", result_json.error_line)
 		print("Error String: ", result_json.error_string)
+		print("Error file: ", filename)
 		return null
 
 
@@ -163,4 +165,8 @@ func check_external_data():
 
 func get_line_of_short(shortname):
 	var index = Array(column('short')).find(shortname)
-	return data[index + 1]
+	if index == -1:
+		print(shortname, ' is not referred in data array.')
+		return null
+	else:
+		return data[index + 1]
