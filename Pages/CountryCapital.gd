@@ -19,6 +19,9 @@ func _ready() -> void:
 
 
 func init(shortname, start=PageSwitcher.random_int(0, 1)):
+	# start = 0: What's the capital of this country?
+	# start = 1: What's the country having this capital?
+	
 	var line = DataLoader.get_line_of_short(shortname)
 	var is_question_country = true
 	# Setting question and answer
