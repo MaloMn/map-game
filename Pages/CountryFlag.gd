@@ -42,7 +42,7 @@ func init(shortname):
 
 
 func _update_viewport():
-		# Setting the size of the objects responsively
+	# Setting the size of the objects responsively
 	if typeof(flag_path) != TYPE_STRING:
 		# Window size
 		var winsize = OS.window_size
