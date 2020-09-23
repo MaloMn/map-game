@@ -17,12 +17,13 @@ var ratio = 0.3
 
 func _ready() -> void:
 	get_tree().get_root().connect("size_changed", self, "_update_viewport")
-	_update_viewport()
 	
 	get_node("MultipleChoice").connect("clicked", self, "_clicked")
 	
 	multiple.add_constant_override("hseparation", margin)
 	multiple.add_constant_override("vseparation", margin) 
+	
+	_update_viewport()
 
 
 func init(shortname):
