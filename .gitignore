@@ -4,4 +4,5 @@
 .import
 test.*
 resources/
-data/
+data/**/*.json
+data/**/*.png

@@ -1,0 +1,207 @@
+,Country,Country info,Capital,Capital info,Capital hint,Flag,Flag similarity,Polygon,Pinpoint,short,tags
+0,Abkhazia,Independent state claimed by Georgia.,Sukhumi,,,x,,x,x,abkhazia,Europe.Sovereign_State
+1,Afghanistan,,Kabul,,,x,,x,x,afghanistan,Asia.Sovereign_State
+2,Albania,,Tirana,,,x,,x,x,albania,Europe.Mediterranean.Sovereign_State
+3,Algeria,,Algiers,,,x,,x,x,algeria,Africa.Mediterranean.Sovereign_State
+4,Andorra,,Andorra la Vella,,,x,"Moldova (wider, coat of arms with eagle)",x,x,andorra,Europe.Sovereign_State
+5,Angola,,Luanda,,,x,,x,x,angola,Africa.Sovereign_State
+6,Antigua and Barbuda,,St. John's,,,x,,x,x,antigua_and_barbuda,Caribbean.North_America.Sovereign_State
+7,Argentina,,Buenos Aires,,,x,,x,x,argentina,South_America.Sovereign_State
+8,Armenia,,Yerevan,,,x,,x,x,armenia,Europe.Sovereign_State
+9,Australia,,Canberra,,,x,"New Zealand (red stars, two fewer stars)",x,x,australia,Oceania.Sovereign_State
+10,Austria,,Vienna,,,x,"Latvia (darker red, narrower white band)",x,x,austria,Europe.European_Union.Sovereign_State
+11,Azerbaijan,,Baku,,,x,,x,x,azerbaijan,Europe.Sovereign_State
+12,Bahrain,,Manama,,,x,"Qatar (wider, more serrated edges, maroon)",x,x,bahrain,Asia.Middle_East.Sovereign_State
+13,Bangladesh,,Dhaka,,,x,,x,x,bangladesh,Asia.Sovereign_State
+14,Barbados,,Bridgetown,,,x,,x,x,barbados,Caribbean.North_America.Sovereign_State
+15,Belarus,,Minsk,,,x,,x,x,belarus,Europe.Sovereign_State
+16,Belgium,,Brussels,,Sovereign country,x,,x,x,belgium,Europe.European_Union.Sovereign_State
+17,Belize,,Belmopan,,,x,,x,x,belize,North_America.Sovereign_State
+18,Benin,,Porto-Novo,"While Porto-Novo is the official capital, Cotonou is the de facto seat of government.",,x,,x,x,benin,Africa.Sovereign_State.West_Africa
+19,Bhutan,,Thimphu,,,x,,x,x,bhutan,Asia.Sovereign_State
+20,Bolivia,,Sucre,"While Sucre is the constitutional capital, La Paz is the seat of government.",,x,Ghana (star instead of coat of arms),x,x,bolivia,South_America.Sovereign_State
+21,Bosnia and Herzegovina,,Sarajevo,,,x,,x,x,bosnia_and_herzegovina,Europe.Mediterranean.Sovereign_State
+22,Botswana,,Gaborone,,,x,,x,x,botswana,Africa.Sovereign_State
+23,Brazil,,Brasilia,,,x,,x,x,brazil,South_America.Sovereign_State
+24,Brunei,,Bandar Seri Begawan,,,x,,x,x,brunei,Asia.Southeast_Asia.Sovereign_State
+25,Bulgaria,,Sofia,,,x,,x,x,bulgaria,Europe.European_Union.Sovereign_State
+26,Burkina Faso,,Ouagadougou,,,x,,x,x,burkina_faso,Africa.Sovereign_State.West_Africa
+27,Burundi,,Gitega,Official capital was moved from Bujumbura to Gitega in 2019.,,x,,x,x,burundi,Africa.East_Africa.Sovereign_State
+28,Cambodia,,Phnom Penh,,,x,,x,x,cambodia,Asia.Southeast_Asia.Sovereign_State
+29,Cameroon,,Yaoundé,,,x,"Senegal (green/yellow/red, green star)",x,x,cameroon,Africa.Sovereign_State
+30,Canada,,Ottawa,,,x,,x,x,canada,North_America.Sovereign_State
+31,Cape Verde,Also known as Cabo Verde.,Praia,,,x,,x,x,cape_verde,Africa.Sovereign_State.West_Africa
+32,Central African Republic,,Bangui,,,x,,x,x,central_african_republic,Africa.Sovereign_State
+33,Chad,,N'Djamena,,,x,Romania (slightly lighter blue),x,x,chad,Africa.Sovereign_State
+34,Chile,,Santiago,,,x,,x,x,chile,South_America.Sovereign_State
+35,China,,Beijing,,,x,,x,x,china,Asia.Sovereign_State
+36,Colombia,,Bogotá,,,x,Ecuador (with coat of arms),x,x,colombia,South_America.Sovereign_State
+37,Comoros,,Moroni,,,x,,x,x,comoros,Africa.East_Africa.Sovereign_State
+38,Cook Islands,,Avarua,,,x,,x,x,cook_islands,Oceania.Sovereign_State
+39,Costa Rica,,San José,,,x,,x,x,costa_rica,North_America.Sovereign_State
+40,Croatia,,Zagreb,,,x,,x,x,croatia,Europe.European_Union.Mediterranean.Sovereign_State
+41,Cuba,,Havana,,,x,"Puerto Rico (blue triangle, red stripes)",x,x,cuba,Caribbean.North_America.Sovereign_State
+42,Cyprus,,Nicosia,,,x,,x,x,cyprus,Asia.European_Union.Mediterranean.Middle_East.Sovereign_State
+43,Czech Republic,Also known as Czechia.,Prague,,,x,,x,x,czech_republic,Europe.European_Union.Sovereign_State
+44,Democratic Republic of the Congo,Formerly Zaire.,Kinshasa,,,x,,x,x,democratic_republic_of_the_congo,Africa.Sovereign_State
+45,Denmark,,Copenhagen,,,x,,x,x,denmark,Europe.European_Union.Sovereign_State
+46,Djibouti,,Djibouti,,,x,,x,x,djibouti,Africa.East_Africa.Sovereign_State
+47,Dominica,,Roseau,,,x,,x,x,dominica,Caribbean.North_America.Sovereign_State
+48,Dominican Republic,,Santo Domingo,,,x,,x,x,dominican_republic,Caribbean.North_America.Sovereign_State
+49,East Timor,Also known as Timor-Leste.,Dili,,,x,,x,x,east_timor,Asia.Southeast_Asia.Sovereign_State
+50,Ecuador,,Quito,,,x,Colombia (no coat of arms),x,x,ecuador,South_America.Sovereign_State
+51,Egypt,,Cairo,,,x,"Iraq (text instead of emblem), Syria (two stars instead of emblem), Yemen (no emblem)",x,x,egypt,Africa.Mediterranean.Middle_East.Sovereign_State
+52,El Salvador,,San Salvador,,,x,"Nicaragua (different coat of arms, slightly lighter blue)",x,x,el_salvador,North_America.Sovereign_State
+53,Equatorial Guinea,,Malabo,,,x,,x,x,equatorial_guinea,Africa.Sovereign_State
+54,Eritrea,,Asmara,,,x,,x,x,eritrea,Africa.East_Africa.Sovereign_State
+55,Estonia,,Tallinn,,,x,,x,x,estonia,Europe.European_Union.Sovereign_State
+56,Eswatini,Known as Swaziland until 2018.,Mbabane,"While Mbabane is the official, executive capital, Lobamba is the traditional, spiritual and legislative capital.",,x,,x,x,eswatini,Africa.Sovereign_State
+57,Ethiopia,,Addis Ababa,,,x,,x,x,ethiopia,Africa.East_Africa.Sovereign_State
+58,Federated States of Micronesia,,Palikir,,,x,,x,x,federated_states_of_micronesia,Oceania.Sovereign_State
+59,Fiji,,Suva,,,x,,x,x,fiji,Oceania.Sovereign_State
+60,Finland,,Helsinki,,,x,,x,x,finland,Europe.European_Union.Sovereign_State
+61,France,,Paris,,,x,,x,x,france,Europe.European_Union.Mediterranean.Sovereign_State
+62,Gabon,,Libreville,,,x,,x,x,gabon,Africa.Sovereign_State
+63,Georgia,,Tbilisi,,,x,,x,x,georgia,Europe.Sovereign_State
+64,Germany,,Berlin,,,x,,x,x,germany,Europe.European_Union.Sovereign_State
+65,Ghana,,Accra,,,x,Bolivia (coat of arms instead of star),x,x,ghana,Africa.Sovereign_State.West_Africa
+66,Greece,,Athens,,,x,,x,x,greece,Europe.European_Union.Mediterranean.Sovereign_State
+67,Grenada,,St. George's,,,x,,x,x,grenada,Caribbean.North_America.Sovereign_State
+68,Guatemala,,Guatemala City,,,x,,x,x,guatemala,North_America.Sovereign_State
+69,Guinea,,Conakry,,,x,"Mali (red and green flipped, slightly brighter green)",x,x,guinea,Africa.Sovereign_State.West_Africa
+70,Guinea-Bissau,,Bissau,,,x,,x,x,guinea-bissau,Africa.Sovereign_State.West_Africa
+71,Guyana,,Georgetown,,Sovereign country,x,,x,x,guyana,South_America.Sovereign_State
+72,Haiti,,Port-au-Prince,,,x,,x,x,haiti,Caribbean.North_America.Sovereign_State
+73,Honduras,,Tegucigalpa,,,x,,x,x,honduras,North_America.Sovereign_State
+74,Hungary,,Budapest,,,x,,x,x,hungary,Europe.European_Union.Sovereign_State
+75,Iceland,,Reykjavík,,,x,"Norway (red background, blue cross), Faroe Islands (white background, red and blue cross)",x,x,iceland,Europe.Sovereign_State
+76,India,,New Delhi,,,x,,x,x,india,Asia.Sovereign_State
+77,Indonesia,,Jakarta,,,x,"Monaco (narrower, darker red), Poland (red and white flipped, darker red)",x,x,indonesia,Asia.Southeast_Asia.Sovereign_State
+78,Iran,,Tehran,,,x,,x,x,iran,Asia.Middle_East.Sovereign_State
+79,Iraq,,Baghdad,,,x,"Egypt (emblem instead of text), Syria (two stars instead of text), Yemen (no text)",x,x,iraq,Asia.Middle_East.Sovereign_State
+80,Ireland,,Dublin,,,x,"Ivory Coast (green and orange flipped, narrower)",x,x,ireland,Europe.European_Union.Sovereign_State
+81,Israel,,Jerusalem,,,x,,x,x,israel,Asia.Mediterranean.Middle_East.Sovereign_State
+82,Italy,,Rome,,,x,,x,x,italy,Europe.European_Union.Mediterranean.Sovereign_State
+83,Ivory Coast,Officially Côte d'Ivoire.,Yamoussoukro,"While Yamoussoukro is the official capital, Abidjan is the de facto seat of government.",,x,"Ireland (orange and green flipped, wider)",x,x,ivory_coast,Africa.Sovereign_State.West_Africa
+84,Jamaica,,Kingston,,Sovereign country,x,,x,x,jamaica,Caribbean.North_America.Sovereign_State
+85,Japan,,Tokyo,,,x,,x,x,japan,Asia.Sovereign_State
+86,Jordan,,Amman,,,x,,x,x,jordan,Asia.Middle_East.Sovereign_State
+87,Kazakhstan,,Nur-Sultan,Known as Astana until March 2019.,,x,,x,x,kazakhstan,Asia.Sovereign_State
+88,Kenya,,Nairobi,,,x,,x,x,kenya,Africa.East_Africa.Sovereign_State
+89,Kiribati,,Tarawa,,,x,,x,x,kiribati,Oceania.Sovereign_State
+90,Kosovo,Partially recognised state claimed by Serbia.,Pristina,,,x,,x,x,kosovo,Europe.Sovereign_State
+91,Kuwait,,Kuwait City,,,x,,x,x,kuwait,Asia.Middle_East.Sovereign_State
+92,Kyrgyzstan,,Bishkek,,,x,,x,x,kyrgyzstan,Asia.Sovereign_State
+93,Laos,,Vientiane,,,x,,x,x,laos,Asia.Southeast_Asia.Sovereign_State
+94,Latvia,,Riga,,,x,"Austria (brighter red, wider white band)",x,x,latvia,Europe.European_Union.Sovereign_State
+95,Lebanon,,Beirut,,,x,,x,x,lebanon,Asia.Mediterranean.Middle_East.Sovereign_State
+96,Lesotho,,Maseru,,,x,,x,x,lesotho,Africa.Sovereign_State
+97,Liberia,,Monrovia,,,x,,x,x,liberia,Africa.Sovereign_State.West_Africa
+98,Libya,,Tripoli,,,x,,x,x,libya,Africa.Mediterranean.Sovereign_State
+99,Liechtenstein,,Vaduz,,,x,,x,x,liechtenstein,Europe.Sovereign_State
+100,Lithuania,,Vilnius,,,x,,x,x,lithuania,Europe.European_Union.Sovereign_State
+101,Luxembourg,,Luxembourg City,Officially Luxembourg.,,x,Netherlands (darker blue),x,x,luxembourg,Europe.European_Union.Sovereign_State
+102,Madagascar,,Antananarivo,,,x,,x,x,madagascar,Africa.East_Africa.Sovereign_State
+103,Malawi,,Lilongwe,,,x,,x,x,malawi,Africa.East_Africa.Sovereign_State
+104,Malaysia,,Kuala Lumpur,,,x,,x,x,malaysia,Asia.Southeast_Asia.Sovereign_State
+105,Maldives,,Malé,,,x,,x,x,maldives,Asia.Sovereign_State
+106,Mali,,Bamako,,,x,"Guinea (green and red flipped, slightly darker green)",x,x,mali,Africa.Sovereign_State.West_Africa
+107,Malta,,Valletta,,,x,,x,x,malta,Europe.European_Union.Mediterranean.Sovereign_State
+108,Marshall Islands,,Majuro,,,x,,x,x,marshall_islands,Oceania.Sovereign_State
+109,Mauritania,,Nouakchott,,,x,,x,x,mauritania,Africa.Sovereign_State.West_Africa
+110,Mauritius,,Port Louis,,,x,,x,x,mauritius,Africa.East_Africa.Sovereign_State
+111,Mexico,,Mexico City,,,x,,x,x,mexico,North_America.Sovereign_State
+112,Moldova,,Chișinău,,,x,"Andorra (narrower, coat of arms with motto)",x,x,moldova,Europe.Sovereign_State
+113,Monaco,,Monaco,,,x,"Indonesia (wider, brighter red), Poland (red and white flipped, wider)",x,x,monaco,Europe.Mediterranean.Sovereign_State
+114,Mongolia,,Ulaanbaatar,,,x,,x,x,mongolia,Asia.Sovereign_State
+115,Montenegro,,Podgorica,Cetinje is an honorary capital.,,x,,x,x,montenegro,Europe.Mediterranean.Sovereign_State
+116,Morocco,,Rabat,,,x,,x,x,morocco,Africa.Mediterranean.Sovereign_State
+117,Mozambique,,Maputo,,,x,,x,x,mozambique,Africa.East_Africa.Sovereign_State
+118,Myanmar,Also known as Burma.,Naypyidaw,,,x,,x,x,myanmar,Asia.Southeast_Asia.Sovereign_State
+119,Namibia,,Windhoek,,,x,,x,x,namibia,Africa.Sovereign_State
+120,Nauru,,Yaren,Nauru has no official capital; the Yaren District is the de facto capital.,,x,Curaçao (two stars in top-left corner),x,x,nauru,Oceania.Sovereign_State
+121,Nepal,,Kathmandu,,,x,,x,x,nepal,Asia.Sovereign_State
+122,Netherlands,,Amsterdam,"While Amsterdam is the official capital, The Hague is the seat of the executive and legislative branches.",,x,Luxembourg (lighter blue),x,x,netherlands,Europe.European_Union.Sovereign_State
+123,New Zealand,,Wellington,,,x,"Australia (white stars, two more stars)",x,x,new_zealand,Oceania.Sovereign_State
+124,Nicaragua,,Managua,,,x,"El Salvador (different coat of arms, slightly darker blue)",x,x,nicaragua,North_America.Sovereign_State
+125,Niger,,Niamey,,,x,,x,x,niger,Africa.Sovereign_State.West_Africa
+126,Nigeria,,Abuja,,,x,,x,x,nigeria,Africa.Sovereign_State.West_Africa
+127,Niue,,Alofi,,,x,,x,x,niue,Oceania.Sovereign_State
+128,North Korea,,Pyongyang,,,x,,x,x,north_korea,Asia.Sovereign_State
+129,North Macedonia,Formerly known as Macedonia.,Skopje,,,x,,x,x,north_macedonia,Europe.Sovereign_State
+130,Northern Cyprus,State recognised only by Turkey and claimed by Cyprus.,North Nicosia,,,x,,x,x,northern_cyprus,Asia.Mediterranean.Middle_East.Sovereign_State
+131,Norway,,Oslo,,,x,"Iceland (blue background, red cross), Faroe Islands (white background, red and blue cross)",x,x,norway,Europe.Sovereign_State
+132,Oman,,Muscat,,,x,,x,x,oman,Asia.Middle_East.Sovereign_State
+133,Pakistan,,Islamabad,,,x,,x,x,pakistan,Asia.Sovereign_State
+134,Palau,,Ngerulmud,,,x,,x,x,palau,Oceania.Sovereign_State
+135,Palestine,,Ramallah,,,x,"Sudan (green arrow, red stripe)",x,x,palestine,Asia.Mediterranean.Middle_East.Sovereign_State
+136,Panama,,Panama City,,,x,,x,x,panama,North_America.Sovereign_State
+137,Papua New Guinea,,Port Moresby,,,x,,x,x,papua_new_guinea,Oceania.Sovereign_State
+138,Paraguay,,Asunción,,,x,,x,x,paraguay,South_America.Sovereign_State
+139,Peru,,Lima,,,x,,x,x,peru,South_America.Sovereign_State
+140,Philippines,,Manila,,,x,,x,x,philippines,Asia.Southeast_Asia.Sovereign_State
+141,Poland,,Warsaw,,,x,"Indonesia (white and red flipped, brighter red), Monaco (white and red flipped, narrower)",x,x,poland,Europe.European_Union.Sovereign_State
+142,Portugal,,Lisbon,,,x,,x,x,portugal,Europe.European_Union.Sovereign_State
+143,Qatar,,Doha,,,x,"Bahrain (narrower, fewer serrated edges, red)",x,x,qatar,Asia.Middle_East.Sovereign_State
+144,Republic of Artsakh,"Independent state claimed by Azerbaijan, formerly known as Nagorno-Karabakh.",Stepanakert,,,x,,x,x,republic_of_artsakh,Asia.Sovereign_State
+145,Republic of the Congo,,Brazzaville,,,x,,x,x,republic_of_the_congo,Africa.Sovereign_State
+146,Romania,,Bucharest,,,x,Chad (slightly darker blue),x,x,romania,Europe.European_Union.Sovereign_State
+147,Russia,,Moscow,,,x,,x,x,russia,Europe.Sovereign_State
+148,Rwanda,,Kigali,,,x,,x,x,rwanda,Africa.East_Africa.Sovereign_State
+149,Sahrawi Arab Democratic Republic,Partially recognised state claimed by Morocco.,Laayoune,"While Laayoune, also known as El Aaiún, is the declared capital, Tifariti is the de facto seat of government.",,x,,x,x,sahrawi_arab_democratic_republic,Africa.Sovereign_State
+150,Saint Kitts and Nevis,,Basseterre,,Sovereign country,x,,x,x,saint_kitts_and_nevis,Caribbean.North_America.Sovereign_State
+151,Saint Lucia,,Castries,,,x,,x,x,saint_lucia,Caribbean.North_America.Sovereign_State
+152,Saint Vincent and the Grenadines,,Kingstown,,,x,,x,x,saint_vincent_and_the_grenadines,Caribbean.North_America.Sovereign_State
+153,Samoa,,Apia,,,x,,x,x,samoa,Oceania.Sovereign_State
+154,San Marino,,City of San Marino,,,x,,x,x,san_marino,Europe.Sovereign_State
+155,Saudi Arabia,,Riyadh,,,x,,x,x,saudi_arabia,Asia.Middle_East.Sovereign_State
+156,Senegal,,Dakar,,,x,"Cameroon (green/red/yellow, yellow star)",x,x,senegal,Africa.Sovereign_State.West_Africa
+157,Serbia,,Belgrade,,,x,,x,x,serbia,Europe.Sovereign_State
+158,Seychelles,,Victoria,,,x,,x,x,seychelles,Africa.East_Africa.Sovereign_State
+159,Sierra Leone,,Freetown,,,x,Galápagos Islands (slightly darker blue),x,x,sierra_leone,Africa.Sovereign_State.West_Africa
+160,Singapore,,Singapore,,,x,,x,x,singapore,Asia.Southeast_Asia.Sovereign_State
+161,Slovakia,,Bratislava,,,x,,x,x,slovakia,Europe.European_Union.Sovereign_State
+162,Slovenia,,Ljubljana,,,x,,x,x,slovenia,Europe.European_Union.Mediterranean.Sovereign_State
+163,Solomon Islands,,Honiara,,,x,,x,x,solomon_islands,Oceania.Sovereign_State
+164,Somalia,,Mogadishu,,,x,,x,x,somalia,Africa.East_Africa.Sovereign_State
+165,Somaliland,Independent state claimed by Somalia.,Hargeisa,,,x,,x,x,somaliland,Africa.East_Africa.Sovereign_State
+166,South Africa,,"Pretoria, Cape Town, Bloemfontein","South Africa has no legally defined capital: the branches of government are split over three cities: Pretoria (executive), Cape Town (legislative) and Bloemfontein (judicial).",,x,,x,x,south_africa,Africa.Sovereign_State
+167,South Korea,,Seoul,,,x,,x,x,south_korea,Asia.Sovereign_State
+168,South Ossetia,Independent state claimed by Georgia.,Tskhinvali,,,x,,x,x,south_ossetia,Asia.Sovereign_State
+169,South Sudan,,Juba,,,x,,x,x,south_sudan,Africa.East_Africa.Sovereign_State
+170,Spain,,Madrid,,,x,,x,x,spain,Europe.European_Union.Mediterranean.Sovereign_State
+171,Sri Lanka,,Sri Jayawardenepura Kotte,"Colombo is often referred to as the capital but Sri Jayawardenepura Kotte, a suburb of Colombo, is the official, legislative capital.",,x,,x,x,sri_lanka,Asia.Sovereign_State
+172,Sudan,,Khartoum,,,x,"Palestine (red arrow, green stripe)",x,x,sudan,Africa.Sovereign_State
+173,Suriname,,Paramaribo,,,x,,x,x,suriname,South_America.Sovereign_State
+174,Sweden,,Stockholm,,,x,,x,x,sweden,Europe.European_Union.Sovereign_State
+175,Switzerland,,Bern,,,x,,x,x,switzerland,Europe.Sovereign_State
+176,Syria,,Damascus,,,x,"Egypt (emblem instead of stars), Iraq (text instead of stars), Yemen (no stars)",x,x,syria,Asia.Mediterranean.Middle_East.Sovereign_State
+177,São Tomé and Príncipe,,São Tomé,,,x,,x,x,sao_tome_and_principe,Africa.Sovereign_State
+178,Taiwan,Partially recognised state claimed by China.,Taipei,,,x,,x,x,taiwan,Asia.Sovereign_State
+179,Tajikistan,,Dushanbe,,,x,,x,x,tajikistan,Asia.Sovereign_State
+180,Tanzania,,Dodoma,"While Dodoma is the official capital, Dar es Salaam is the de facto seat of government.",,x,,x,x,tanzania,Africa.East_Africa.Sovereign_State
+181,Thailand,,Bangkok,,,x,,x,x,thailand,Asia.Southeast_Asia.Sovereign_State
+182,The Bahamas,,Nassau,,,x,,x,x,the_bahamas,Caribbean.North_America.Sovereign_State
+183,The Gambia,,Banjul,,,x,,x,x,the_gambia,Africa.Sovereign_State.West_Africa
+184,Togo,,Lomé,,,x,,x,x,togo,Africa.Sovereign_State.West_Africa
+185,Tonga,,Nuku'alofa,,,x,,x,x,tonga,Oceania.Sovereign_State
+186,Transnistria,Independent state claimed by Moldova.,Tiraspol,,,x,,x,x,transnistria,Europe.Sovereign_State
+187,Trinidad and Tobago,,Port of Spain,,,x,,x,x,trinidad_and_tobago,Caribbean.North_America.Sovereign_State
+188,Tunisia,,Tunis,,,x,,x,x,tunisia,Africa.Mediterranean.Sovereign_State
+189,Turkey,,Ankara,,,x,,x,x,turkey,Asia.Mediterranean.Middle_East.Sovereign_State
+190,Turkmenistan,,Ashgabat,,,x,,x,x,turkmenistan,Asia.Sovereign_State
+191,Tuvalu,,Funafuti,,,x,,x,x,tuvalu,Oceania.Sovereign_State
+192,Uganda,,Kampala,,,x,,x,x,uganda,Africa.East_Africa.Sovereign_State
+193,Ukraine,,Kiev,,,x,,x,x,ukraine,Europe.Sovereign_State
+194,United Arab Emirates,,Abu Dhabi,,,x,,x,x,united_arab_emirates,Asia.Middle_East.Sovereign_State
+195,United Kingdom,,London,,Sovereign country,x,,x,x,united_kingdom,Europe.European_Union.Sovereign_State
+196,United States of America,,Washington DC,,,x,,x,x,united_states_of_america,North_America.Sovereign_State
+197,Uruguay,,Montevideo,,,x,,x,x,uruguay,South_America.Sovereign_State
+198,Uzbekistan,,Tashkent,,,x,,x,x,uzbekistan,Asia.Sovereign_State
+199,Vanuatu,,Port Vila,,,x,,x,x,vanuatu,Oceania.Sovereign_State
+200,Vatican City,,Vatican City,,,x,,x,x,vatican_city,Europe.Sovereign_State
+201,Venezuela,,Caracas,,,x,,x,x,venezuela,South_America.Sovereign_State
+202,Vietnam,,Hanoi,,,x,,x,x,vietnam,Asia.Southeast_Asia.Sovereign_State
+203,Yemen,,Sana'a,,,x,"Egypt (with emblem), Iraq (with text), Syria (with two stars)",x,x,yemen,Asia.Middle_East.Sovereign_State
+204,Zambia,,Lusaka,,,x,,x,x,zambia,Africa.East_Africa.Sovereign_State
+205,Zimbabwe,,Harare,,,x,,x,x,zimbabwe,Africa.East_Africa.Sovereign_State
