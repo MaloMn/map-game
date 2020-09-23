@@ -73,9 +73,8 @@ func _clicked():
 
 func _update_viewport():
 	var container = get_node("VBoxContainer")
-	if container.rect_size[0] + 40 > OS.window_size[0]:
-		container.rect_size[0] = OS.window_size[0] - 40
-		container.rect_position = Vector2(20, 0)
+	container.rect_size[0] = OS.window_size[0] - 40
+	container.rect_position = Vector2(20, 0)
 
 
 func _input(event: InputEvent) -> void:

@@ -55,8 +55,8 @@ func _update_viewport():
 		flag.rect_position = Vector2((winsize[0] - width)/2, margin)
 
 		# MultipleChoice position and size
-		multiple.rect_size = Vector2(width, ratio*winsize[1] - margin)
-		multiple.rect_position = Vector2((winsize[0] - width)/2, (1-ratio)*winsize[1])
+		multiple.rect_size = Vector2(winsize[0] - 2*margin, ratio*winsize[1] - margin)
+		multiple.rect_position = Vector2(margin, (1-ratio)*winsize[1])
 
 
 func _clicked():
